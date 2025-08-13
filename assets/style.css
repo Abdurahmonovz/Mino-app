@@ -1,0 +1,27 @@
+/* UltraLearn — minimal custom styles (Tailwind ustiga) */
+.tab { 
+  @apply px-3 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 whitespace-nowrap cursor-pointer text-sm;
+}
+.tab.active {
+  @apply bg-brand text-white border-brand;
+}
+.card {
+  @apply rounded-2xl bg-white p-4 md:p-5 shadow-soft border border-slate-200;
+}
+.card-title { @apply text-lg font-semibold mb-3; }
+.label { @apply block text-sm font-medium mb-1; }
+.input { @apply w-full rounded-xl border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-brand/40; }
+.textarea { @apply w-full rounded-xl border border-slate-300 p-3 outline-none focus:ring-2 focus:ring-brand/40; }
+.btn-primary { @apply px-4 py-2 rounded-xl bg-brand text-white hover:bg-brand-dark; }
+.btn-secondary { @apply px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50; }
+.btn-danger { @apply px-4 py-2 rounded-xl bg-red-500 text-white hover:bg-red-600; }
+.code { @apply text-xs bg-white p-2 rounded-lg border border-slate-200 overflow-x-auto; }
+.page.hidden { display:none; }
+
+/* Dark mode (experimental) */
+:root.dark body { background:#0b1220; color:#d9e1f7;}
+:root.dark .card { background:#0f172a; border-color:#1e293b;}
+:root.dark .input, :root.dark .textarea { background:#0b1220; color:#e2e8f0; border-color:#243b55;}
+:root.dark .btn-secondary { background:#0b1220; color:#e2e8f0; border-color:#334155;}
+:root.dark .tab { background:#0f172a; color:#e2e8f0; border-color:#1e293b;}
+:root.dark .tab.active { background:#0284c7; border-color:#0284c7;}
